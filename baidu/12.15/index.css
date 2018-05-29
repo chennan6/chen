@@ -1,0 +1,675 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-color: white;
+    width: 1580px;
+    height: 980px;
+    margin: auto;
+}
+
+.menu{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.Primary{
+    width: 20%;
+    height: 100%;
+    background-color: #1d2531;
+    float: left;
+}
+.item{
+    margin: auto;
+    position: relative;
+    top: 2%;
+    right: -2%;
+    background-color: #2a9ef5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.item1 img{
+    position: relative;
+    top: 30%;
+    right: -30%;
+}
+.item2{
+     background-color: #9581e4;
+     margin-top: 20%;
+ }
+.item2 img{
+    position: relative;
+    top: 20%;
+    right: -30%;
+}
+.item3{
+     background-color: #d22e11;
+     margin-top: 20%;
+ }
+.item3 img{
+    position: relative;
+    top: 30%;
+    right: -24%;
+}
+.add{
+    border: 1px solid #b0b0b0;
+    background-color: #1d2531;
+    margin-top: 20%;
+}
+.add img{
+    position: relative;
+    top: 32%;
+    right: -32%;
+}
+.bottom{
+    width: 90%;
+    height: 3%;
+    position: relative;
+    top: 65%;
+    right: -24%;
+}
+.bottom img{margin-right: 10%;}
+.Primary a:hover img{
+    transform-origin: 50% 50%;
+    animation: xz 1500ms ease;
+}
+@keyframes xz {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.Secondary{
+    width: 80%;
+    height: 100%;
+    background-color: #222c3c;
+    float: left;
+}
+.Part{
+    width: 75%;
+    height: 23%;
+    margin: auto;
+    border-bottom: 1px solid #2a3547;
+}
+.Headline{
+    width: 100%;
+    height: 12%;
+    margin-top: 10%;
+    color: #5b6779;
+}
+.Headline h3{
+    display: block;
+    font-size: 18px;
+    float: left;
+}
+.Headline img{
+    float: right;
+    position: relative;
+    top:10%;
+}
+.Part li{
+    list-style: none;
+    margin: 6% 0;
+}
+.Part a{
+    text-decoration: none;
+    color: #b7c0cd;
+}
+.Part a:hover{
+    color: white;
+    font-size: 18px;
+}
+.Notification{
+    float: right;
+    background-color: #2a9ef5;
+    position: relative;
+    width: 32px;
+    height: 24px;
+    border-radius: 40%;
+    text-align: center;
+    color: white;
+}
+.Part2{
+    height: 20%;
+}
+.Part2 li img{
+    margin-right: 5%;
+}
+.Part3 li img{
+    float: right;
+}
+.ServerCapacity{
+    width: 70%;
+    height: 5%;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    color: white;
+    font-size: 10px;
+}
+.ServerCapacity h3{
+    display: block;
+    float: left;
+    font-size: 10px;
+}
+.ServerCapacity p{
+    display: block;
+    float: right;
+}
+.img-top{
+    position: relative;
+    top: 32%;
+    right: 40%;
+}
+
+.content{
+    width: 75%;
+    height: 100%;
+    float: right;
+}
+.Top{
+    width: 100%;
+    height: 8%;
+    background-color: white;
+    border-bottom: 1px solid #b0b0b0;
+}
+.Top h1{
+    margin-left: 2%;
+    font-weight: 100;
+    line-height: 230%;
+    display: block;
+    float: left;
+}
+.Profile{
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+.Profile-left{
+    float: left;
+    position: relative;
+    top: 20%;
+    margin-right: 10%;
+}
+.Profile h2{
+    font-size: 21px;
+    color: #2a9ef5;
+    display: block;
+    margin-top: 6%;
+}
+.Profile p{
+    font-size: 18px;
+    color: gray;
+}
+.Profile-right{
+    float: right;
+    position: relative;
+    top: -30%;
+}
+
+.Chat{
+    width: 100%;
+    height: 92%;
+    float: left;
+}
+
+.Chats-left{
+    width: 35%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #b0b0b0;
+}
+.left-top{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    border-bottom: 1px solid #b0b0b0;
+}
+.left-top input[type="text"]{
+    width: 80%;
+    height: 55%;
+    margin-top: 2%;
+    color: #b2bac8;
+    padding-left: 2%;
+}
+.left-top a{
+    position: relative;
+    top: 7%;
+    right: 7%;
+}
+
+.Chats{
+    width: 100%;
+    height: 94%;
+    float: left;
+    overflow: hidden;
+}
+.chat{
+    width: 100%;
+    height: 15%;
+    float: left;
+    border-bottom: 1px solid #b0b0b0;
+}
+.chat-img,.chat-title,.chat-text{
+    float: left;
+}
+.chat-img {
+    width: 11%;
+    height: 36%;
+    position: relative;
+    top: 10%;
+    right: -5%;
+}
+.chat-title{
+    width: 40%;
+    height: 40%;
+    position: relative;
+    top: 10%;
+    right: -5%;
+}
+.Status{
+     border-radius: 50%;
+     background-color: rgb(0, 170, 255);
+     position: absolute;
+     left: 5%;
+     top: 25%;
+     width: 8px;
+     height: 8px;
+     float: left;
+     visibility: hidden;
+ }
+.chat-title h1{
+    display: block;
+    float: left;
+    font-size: 25px;
+    font-weight: 100;
+    position: relative;
+    top: 10%;
+    right: -12%;
+    color: black;
+}
+.time{
+    width: 30%;
+    height: 50%;
+    float: right;
+    position: absolute;
+    top: 15%;
+    left: 180%;
+}
+.chat-title p{
+    display: block;
+    font-size: 10px;
+    font-weight: 100;
+    position: relative;
+    right: -13%;
+}
+.chat-text{
+    width: 80%;
+    height: 26%;
+    position: relative;
+    left: 5%;
+    top: 20%;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.chat-text p{
+    font-size: 10px;
+    font-weight: 100;
+    color: gray;
+}
+.Notification2{
+    border-radius: 50%;
+    background-color: #2a9ef5;
+    color: white;
+    position: relative;
+    left: 89%;
+    top: 65%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+.Notification2 p{
+    position: relative;
+    top: -350%;
+    right: 3%;
+}
+.chat:hover.chat{
+    border-left: 5px solid #2a9ef5;
+}
+.chat:hover h1{
+    color: #2a9ef5;
+}
+.chat:hover .Status{
+    visibility: visible;
+}
+.Chat3 .chat-title{
+    width: 45%;
+}
+.Chat3 .time{
+    left: 135%;
+}
+.Chat4 .time{
+    left: 150%;
+}
+.Chat5 .chat-title{
+    width: 50%;
+}
+.Chat5 .time{
+    left: 133%;
+}
+.Chat6 .chat-title{
+    width: 35%;
+}
+.Chat6 .time{
+    left: 190%;
+    width: 40%;
+}
+.Chat7 .chat-title{
+    width: 50%;
+}
+.Chat7 .time{
+    left: 137%;
+}
+
+.Chats-right{
+    width: 64%;
+    height: 100%;
+    float: left;
+}
+
+.Chats-right-top{
+    width: 102%;
+    height: 6%;
+    text-align: center;
+    border-bottom: 1px solid #b0b0b0;
+}
+.Chats-right-top h1{
+    display: block;
+    float: left;
+    font-size: 25px;
+    font-weight: 100;
+    position: relative;
+    margin-top: 1%;
+    right: -2%;
+    color: black;
+}
+.Chats-right-top .Status{
+    visibility: visible;
+    background-color: #66bb33;
+    position: relative;
+    left: 3%;
+    top: 40%;
+}
+.Tools{
+    width: 20%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 18%;
+    right: -36%;
+}
+.Divider{
+    width: 1%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 18%;
+    right: -36%;
+}
+.Divider2{
+    width: 1%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 18%;
+    left: 235px;
+}
+.text{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 18%;
+    right: -35%;
+}
+.Base{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 18%;
+    right: -36%;
+}
+.Arrows{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 25%;
+    right: -25%;
+}
+.Tools-User{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 17%;
+    right: -31%;
+}
+.Tools-Upload{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 17%;
+    right: -44%;
+}
+.Tools-Trash{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: -68%;
+    right: -78%;
+}
+.Arrows-left{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 2%;
+    right: -22%;
+}
+.Arrows-right{
+    width: 10%;
+    height: 80%;
+    float: left;
+    position: relative;
+    top: 2%;
+    right: -58%;
+}
+
+.right-content{
+    width: 102%;
+    height: 94%;
+    text-align: center;
+    overflow: hidden;
+}
+.content1{
+    width: 100%;
+    height: 35%;
+    text-align: center;
+}
+.content1-park1{
+    width: 100%;
+    height: 35%;
+    text-align: left;
+    margin: auto;
+}
+.content1-img1{
+    height: 46px;
+    width: 46px;
+    float: left;
+    position: relative;
+    top: 18%;
+    right: -4%;
+}
+.content1-text{
+    width: 87%;
+    height: 95%;
+    float: left;
+    position: relative;
+    top: 7%;
+    right: -6%;
+    overflow: hidden;
+}
+.content1-text h1{
+    display: block;
+    float: left;
+    font-size: 25px;
+    font-weight: 100;
+    /*position: relative;*/
+    /*top: 10%;*/
+    /*right: -12%;*/
+    color: black;
+}
+.content1-text h3{
+    display: block;
+    float: left;
+    font-size: 15px;
+    font-weight: 100;
+    position: relative;
+    top: 5%;
+    right: -4%;
+    color: #b0b0b0;
+}
+.content1-text p{
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: 100;
+    /*position: relative;*/
+    /*top: 18%;*/
+    /*right: -12%;*/
+    color: gray;
+}
+.content1-park2{
+    width: 100%;
+    height: 65%;
+    text-align: left;
+    margin: auto;
+}
+.content1-text1{
+    word-break: break-all;
+}
+.Tuesday {
+    width: 95px;
+    height: 10px;
+    margin: auto;
+    position: relative;
+    top: -2%;
+    right: -4%;
+    color: gray;
+}
+
+.content2{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+.content2-park1{
+    width: 100%;
+    height: 20%;
+}
+.content2-park2{
+    width: 100%;
+    height: 45%;
+}
+.content2-img1{
+    width: 20%;
+    height: 29%;
+    background-image: url("img/right-top-img/Photo2.png");
+    position: relative;
+    top: 3%;
+    right: -12%;
+    float: left;
+}
+.content2-img2{
+    width: 20%;
+    height: 29%;
+    background-image: url("img/right-top-img/Photo3.png");
+    position: relative;
+    top: 3%;
+    right: -17%;
+    float: left;
+}
+.content2-img3{
+    width: 50%;
+    height: 60%;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    visibility: hidden;
+}
+.Base2{
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    right: -10%;
+}
+.Open{
+    width: 20%;
+    height: 29%;
+    position: relative;
+    top: -55%;
+    right: -40%;
+}
+.content2-img1:hover .content2-img3,.content2-img2:hover .content2-img3{
+    visibility: visible;
+}
+
+.New.Messages {
+    width: 125px;
+    height: 10px;
+    margin: auto;
+    position: relative;
+    top: -2%;
+    right: -4%;
+    color: #a7d6f9;
+}
+
+.content3{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+.content3-park1{
+    width: 100%;
+    height: 70%;
+}
+.content3 input[type="text"] {
+    width: 85%;
+    height: 41%;
+    padding-left: 4%;
+    border: 1px solid #DFE3E9;
+    border-radius: 4px;
+    position: relative;
+    left: 4%;
+    top: 10%;
+}
+.ADD{
+    width: 90%;
+    height: 40%;
+    position: relative;
+    left: -36%;
+    top: -43%;
+}
