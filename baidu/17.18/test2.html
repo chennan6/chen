@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>简单计算器：</h1>
+<input id="first-number" type="number" value="0" placeholder="第一个数字">
+<input id="second-number" type="number" value="0" placeholder="第二个数字">
+<button id="add-btn" onclick="add()">加</button>
+<button id="minus-btn" onclick="minus()">减</button>
+<button id="times-btn" onclick="times()">乘</button>
+<button id="divide-btn" onclick="divide()">除</button>
+<p id="result">运算结果</p>
+<h1>进制转换：</h1>
+<input type="number" id="num" placeholder="请输入一个非零的数字">
+<button id="but" onclick="turn()" >转换</button>
+<p id="text">运算结果</p>
+<h1>小游戏：</h1>
+<button id="game" onclick="game()" >打开console查看</button>
+<h1>九九乘法表:</h1>
+<button id="mul-console" onclick="mulconsole()" >打开console查看</button>
+<button id="mul-body" onclick="mulbody()" >当前页面查看</button>
+<div id="Mul"></div>
+<script>
+    //简单计算器
+    function first() {
+        var x = document.getElementById('first-number').value;
+        return x;
+    }
+    function second() {
+        var y = document.getElementById('second-number').value;
+        return y;
+    }
+    function result(z) {
+        var result = document.getElementById("result").innerHTML="运算结果:"+z;
+        return result;
+    }
+    function add() {
+        var x = first();
+        var y = second();
+        var z = Number(x) + Number(y);
+        result(z);
+    }
+    function minus() {
+        var x = first();
+        var y = second();
+        var z = Number(x) - Number(y);
+        result(z);
+    }
+    function times() {
+        var x = first();
+        var y = second();
+        var z = Number(x) * Number(y);
+        result(z);
+    }
+    function divide() {
+        var x = first();
+        var y = second();
+        if(y == 0){
+            document.getElementById("result").innerHTML="第二个数不能为0";
+        }else {
+        var z = Number(x) / Number(y);
+        result(z);
+        }
+    }
+    //进制转换
+    function turn() {
+        var x=document.getElementById("num").value;
+        if(x<0){
+            document.getElementById("text").innerHTML=("请输入一个大于0的数！");
+        }else {
+            document.getElementById("text").innerHTML=(Number(x)).toString(2);
+        }
+    }
+    //小游戏
+    function game() {
+        for(var i=1;i<101;i++){
+            if(i.toString().indexOf("3")>-1|| i%3 == 0){
+                console.log("PA");
+            }else {
+            console.log(i);}
+        }
+    }
+    //九九乘法表
+    function mulconsole() {
+        for(var i=1;i<10;i++){
+            var x="";
+            for(var j=1;j<i+1;j++){
+                x=x+i+'*'+j+'='+(i*j)+' ';
+            }console.log(x);
+        }
+    }
+    function mulbody() {
+        var table = document.createElement("table");
+        for(var i = 1; i < 10 ; i++){
+            var trNode = table.insertRow();
+            for(var j = 1; j < i+1; j++){
+                var tdNode=trNode.insertCell();
+                tdNode.innerHTML = i+'*'+j+'='+(i*j)+' ';
+            }
+        }
+        document.getElementById("Mul").appendChild(table);
+    }
+    //打招呼
+//    function time() {
+//        var x=new Date();
+//        if (x.getHours()>=6&&x.getHours()<12){
+//            alert("早上好");
+//        }
+//        else if(x.getHours()>=12&&x.getHours()<18){
+//            alert("下午好");
+//        }
+//        else if(x.getHours()>=18&&x.getHours()<24){
+//            alert("晚上好");
+//        }
+//        else {
+//            alert("凌晨好");
+//        }
+//    }
+    window.onload = function() {
+//        time();
+        var x=new Date();
+        if (x.getHours()>=6&&x.getHours()<12){
+            alert("早上好");
+        }
+        else if(x.getHours()>=12&&x.getHours()<18){
+            alert("下午好");
+        }
+        else if(x.getHours()>=18&&x.getHours()<24){
+            alert("晚上好");
+        }
+        else {
+            alert("凌晨好");
+        }
+    }
+</script>
+</body>
+</html>
