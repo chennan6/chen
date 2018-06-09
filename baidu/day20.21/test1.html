@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+</head>
+<body>
+<input id="name" type="text" placeholder="请打开控制台查看！">
+<button id="submit-btn" onclick="btnclick()">Submit</button>
+<div>
+    <button><a href="test5.html">上一个练习</a> </button>
+    <button><a href="test2.html">下一个练习</a> </button>
+</div>
+<script>
+    var val=document.getElementById("name");
+    function btnclick() {
+        console.log(val.value);
+    }
+    document.onkeydown =function (){
+        if(event.keyCode ==13){
+            btnclick();
+        }else if (event.keyCode ==27){
+            val.value="";
+        }
+    }
+</script>
+</body>
+</html>

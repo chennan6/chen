@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IFE</title>
+    <style>
+        #box{
+            width: 482px;
+            height: 482px;
+            margin: auto;
+            position: relative;
+            top:0;
+
+        }
+        #img-box{
+            width: 482px;
+            height: 482px;
+            position: absolute;
+            top: 0;
+            background-image: url("erik.jpg");
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="img-box"></div>
+    <!--<div class="img-box img2"></div>-->
+    <!--<div class="img-box img3"></div>-->
+    <!--<div class="img-box img4"></div>-->
+    <!--<div class="img-box img5"></div>-->
+    <!--<div class="img-box img6"></div>-->
+    <!--<div class="img-box img7"></div>-->
+    <!--<div class="img-box img8"></div>-->
+    <!--<div class="img-box img9"></div>-->
+    <!--<div class="img-box img10"></div>-->
+</div>
+<div style="width: 482px; height: 482px;margin: auto;">
+<button style="float: left"><a href="test4.html">上一个练习</a> </button>
+<button style="float:right"><a href="test1.html">下一个练习</a> </button>
+</div>
+<script>
+    window.onload=function () {
+        var y=0;
+        var img=document.getElementById("img-box");
+                setInterval(function () {
+                y = y - 480 ;
+                var z = y + 'px';
+                img.style.cssText = 'background-position' + ':' + 0 + ' ' + z;
+            }, 180);
+    }
+</script>
+</body>
+</html>
+
+
+

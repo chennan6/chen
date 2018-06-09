@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+    <style>
+        select{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<label>
+    <input type="radio" id="school" name="status" onclick=show1()>
+    School
+</label>
+<label>
+    <input id="company" name="status" type="radio" onclick=show2()>
+    Company
+</label>
+
+<select id="school-select">
+    <option>北京邮电大学</option>
+    <option>黑龙江大学</option>
+    <option>黑龙江大学</option>
+</select>
+
+<select id="company-select">
+    <option>百度</option>
+    <option>爱奇艺</option>
+</select>
+
+<div>
+<button><a href="test1.html">上一个练习</a> </button>
+<button><a href="test3.html">下一个练习</a> </button>
+</div>
+<script>
+    var schoolid=document.getElementById("school-select");
+    var companyid=document.getElementById("company-select");
+    function show1() {
+        schoolid.style="display:block;";
+        companyid.style="display:none;";
+    }
+
+    function show2() {
+        companyid.style="display:block;";
+        schoolid.style="display:none;";
+    }
+</script>
+</body>
+</html>
