@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+</head>
+<body>
+<div>
+    <button><a href="test4.html">上一个练习</a> </button>
+    <button><a href="test6.html">下一个练习</a> </button>
+</div>
+<script>
+    window.onload=function () {
+        alert("请按F12打开控制台查看结果！");
+    };
+
+    //将下面数组分别按从大到小以及从小到大进行排序后在console中输出
+    var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+    console.log("原数组:"+arr);
+    console.log("从小到大:"+arr.sort(function (a,b) { return a-b;   }));
+    console.log("从大到小:"+arr.sort(function (a,b) { return b-a;   }));
+    console.log("************************************************");
+
+
+    //将下面数组分别按字母顺序a-z及z-a进行排序，在console中输出
+    var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+    console.log("原数组:"+arr);
+    console.log("a-z:"+arr.sort());
+    var turnarr=arr.sort();
+    console.log("z-a:"+turnarr.reverse());
+    console.log("************************************************");
+
+
+    //将下面的二维数组，按照每个元素中第二个数从大到小的顺序进行排序输出，输出结果应该为：
+    var arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+    console.log("原数组:"+arr);
+    console.log("第二个数从大到小："+JSON.stringify(arr.sort(function (a,b){ return b[1]-a[1];  })));
+    console.log("************************************************");
+
+
+    //将下面数组分别按元素对象的value值从小到大进行排序后输出
+    var arr = [
+        {
+            id: 1,
+            name: 'candy',
+            value: 40
+        }, {
+            id: 2,
+            name: 'Simon',
+            value: 50
+        }, {
+            id: 3,
+            name: 'Tony',
+            value: 45
+        }, {
+            id: 4,
+            name: 'Annie',
+            value: 60
+        }
+    ];
+    console.log("原数组:"+arr);
+    console.log("对象的value值从小到大："+JSON.stringify(arr.sort(function (a,b){ return a.value-b.value; })));
+    console.log("************************************************");
+</script>
+</body>
+</html>

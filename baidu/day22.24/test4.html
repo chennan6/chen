@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+</head>
+<body>
+<div>
+<input id="queue-input" type="text">
+<p id="queue-cont">队列内容：apple-&gt;pear</p>
+<button id="in-btn1">以->入队</button>
+<button id="in-btn2">以<-入队</button>
+<button id="out-btn">出队</button>
+<button id="font-btn">打印队头元素内容</button>
+<button id="last-btn">打印队头元素内容</button>
+<button id="empty-btn">判断队列是否为空</button>
+</div>
+<div>
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：apple-&gt;pear</p>
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="top-btn">打印栈顶元素内容</button>
+    <button id="empty">判断栈是否为空</button>
+</div>
+<div>
+    <button><a href="test3.html">上一个练习</a> </button>
+    <button><a href="test5.html">下一个练习</a> </button>
+</div>
+<script>
+    var queue = ["apple", "pear"];
+    var stack = ["apple", "pear"];
+    var x=document.getElementById("queue-cont");
+    var y=document.getElementById("stack-cont");
+    var btn=document.querySelectorAll("button");
+    for(var i=0;i<btn.length;i++){
+        btn[i].onclick=function (e) {
+            var val=document.getElementById("queue-input").value;
+            var stackval=document.getElementById("stack-input").value;
+            var t=e.target;
+            var queuel=queue.length;
+            switch(t.id){
+                case 'in-btn1' :
+                    if(val){
+                        queue.push(val);
+                        x.innerHTML="队列内容："+queue.join("-&gt;");
+                    }else alert("没有输入！");
+                    break;
+                case 'in-btn2' :
+                    if(val){
+                        queue.unshift(val);
+                        x.innerHTML="队列内容："+queue.join("&lt;-");
+                    }else alert("没有输入！");
+                    break;
+                case 'out-btn' :
+                    queue.pop(t);
+                    x.innerHTML="队列内容："+queue.join("-&gt;");
+                    break;
+                case 'font-btn' :
+                    if(queue[0]==undefined){
+                        x.innerHTML="当前队列为空！";
+                    }else {
+                        x.innerHTML="队头元素为："+queue[0];
+                    }
+                    break;
+                case'last-btn':
+                    if(queue[0]==undefined){
+                        x.innerHTML="当前队列为空！";
+                    }else {
+                        x.innerHTML="队尾元素为："+queue[queuel-1];
+                    }
+                    break;
+                case 'empty-btn' :
+                    if(queue[0]==undefined){
+                        x.innerHTML="当前队列为空！";
+                    }else {
+                        x.innerHTML="当前队列不为空！";
+                    }
+                    break;
+                case 'push-btn' :
+                    stack.unshift(stackval);
+                    y.innerHTML="入栈后内容："+stack.join("-&gt;");
+                    break;
+                case 'pop-btn' :
+                    stack.shift();
+                    y.innerHTML="出栈后内容："+stack.join("-&gt;");
+                    break;
+                case 'top-btn' :
+                    if(stack[0]==undefined){
+                    y.innerHTML="当前栈为空！";
+                }else {
+                    y.innerHTML="栈顶元素为："+stack[0];
+                }
+                    break;
+                case 'empty' :
+                    if(stack[0]==undefined){
+                        y.innerHTML="当前栈为空！";
+                    }else {
+                        y.innerHTML="当前栈不为空！";
+                    }
+                    break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

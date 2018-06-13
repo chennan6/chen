@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+</head>
+<body>
+<input id="val" type="text" placeholder="打开控制台查看">
+<button id="ByName" onclick="findIdByName(document.getElementById('val').value,tree)">根据输入name找到对应的id</button>
+<button id="ById" onclick="findNameById(document.getElementById('val').value,tree)">根据输入id找到对应的name</button>
+<button id="DLR" onclick="getListWithDLR(tree)">前序遍历</button>
+<button id="LDR" onclick="getListWithLDR(tree)">中序遍历</button>
+<button id="LRD" onclick="getListWithLRD(tree)">后序遍历</button>
+<div>
+    <button><a href="test2.html">上一个练习</a> </button>
+    <button><a href="test4.html">下一个练习</a> </button>
+</div>
+<script>
+    var tree = {
+        "id": 0,
+        "name": "root",
+        "left": {
+            "id": 1,
+            "name": "Simon",
+            "left": {
+                "id": 3,
+                "name": "Carl",
+                "left": {
+                    "id": 7,
+                    "name": "Lee",
+                    "left": {
+                        "id": 11,
+                        "name": "Fate"
+                    }
+                },
+                "right": {
+                    "id": 8,
+                    "name": "Annie",
+                    "left": {
+                        "id": 12,
+                        "name": "Saber"
+                    }
+                }
+            },
+            "right": {
+                "id": 4,
+                "name": "Tony",
+                "left": {
+                    "id": 9,
+                    "name": "Candy"
+                }
+            }
+        },
+        "right": {
+            "id": 2,
+            "name": "right",
+            "left": {
+                "id": 5,
+                "name": "Carl"
+            },
+            "right": {
+                "id": 6,
+                "name": "Carl",
+                "right": {
+                    "id": 10,
+                    "name": "Kai"
+                }
+            }
+        }
+    };
+
+    // 假设id和name均不会重复，根据输入name找到对应的id
+    function findIdByName(name,obj) {
+        if(obj.name==name){
+            console.log("名字为："+name+"  ID为："+obj.id);
+        }
+        //判断是否有子节点，如果有就调用函数
+        if(obj.left){
+            findIdByName(name,obj.left);
+        }
+        if(obj.right){
+            findIdByName(name,obj.right);
+        }
+    }
+
+    // 假设id和name均不会重复，根据输入id找到对应的name
+    function findNameById(id,obj) {
+        if(obj.id==id){
+            console.log("ID为："+id+"  名字为："+obj.name);
+        }
+        //判断是否有子节点，如果有就调用函数
+        if(obj.left){
+            findNameById(id,obj.left);
+        }
+        if(obj.right){
+            findNameById(id,obj.right);
+        }
+    }
+
+    // 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
+    function getListWithDLR(obj) {
+        console.log(obj.name);
+        if(obj.left){
+            getListWithDLR(obj.left);
+        }
+        if(obj.right){
+            getListWithDLR(obj.right);
+        }
+    }
+
+    // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
+    function getListWithLDR(obj) {
+        if(obj.left){
+            getListWithLDR(obj.left);
+        }
+        console.log(obj.name);
+        if(obj.right){
+            getListWithLDR(obj.right);
+        }
+    }
+
+    // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
+    function getListWithLRD(obj) {
+        if(obj.left){
+            getListWithLRD(obj.left);
+        }
+        if(obj.right){
+            getListWithLRD(obj.right);
+        }
+        console.log(obj.name);
+    }
+</script>
+
+
+</body>
+</html>
