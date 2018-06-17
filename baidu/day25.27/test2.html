@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE</title>
+</head>
+<body onload="startTime()">
+<p id="txt1"></p>
+<p id="txt2"></p>
+<div>
+    <button><a href="test1.html">上一个练习</a> </button>
+    <button><a href="test3.html">下一个练习</a> </button>
+</div>
+<script>
+    var t1=document.getElementById('txt1');
+    var t2=document.getElementById('txt2');
+    var C,E,APM;
+    //判断星期几
+    function Weak(i) {
+        switch (i){
+            case 0:
+                C = "星期天";
+                E = "Sunday";break;
+            case 1:
+                C = "星期一";
+                E = "Monday";break;
+            case 2:
+                C = "星期二";
+                E = "Tuesday";break;
+            case 3:
+                C = "星期三";
+                E = "Wednesday";break;
+            case 4:
+                C = "星期四";
+                E = "Thursday";break;
+            case 5:
+                C = "星期五";
+                E = "Friday";break;
+            case 6:
+                C = "星期六";
+                E = "Saturday";break;
+        }
+    }
+    //输出函数
+    function startTime()
+    {
+        var today=new Date();
+        var h=today.getHours(),
+            m=today.getMinutes(),
+            s=today.getSeconds(),
+            weak=today.getDay(),
+            yeas=today.getFullYear(),
+            month=today.getMonth(),
+            day=today.getDate();
+        h=checkTime(h);
+        if(h>12){APM="PM"}else {APM='AM'}
+        m=checkTime(m);
+        s=checkTime(s);
+        Weak(weak);
+        t1.innerHTML="今天是："+yeas+"年"+month+"月"+day+"日 "+C+" 时间为："+h+":"+m+":"+s;
+        t2.innerHTML="今天是："+yeas+"-"+month+"-"+day+" "+E+" 时间为："+h+":"+m+":"+s+" "+APM;
+    }
+    // 判断要不要加零
+    function checkTime(i)
+    {
+        if (i<10)
+        {i="0" + i}
+        return i
+    }
+    setInterval(function(){startTime()},500);
+</script>
+</body>
+</html>
